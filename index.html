@@ -13,7 +13,7 @@
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
             margin: 0;
             padding: 20px;
             box-sizing: border-box;
@@ -54,6 +54,10 @@
             background-color: #8957e5;
             box-shadow: 0 4px 12px rgba(137, 87, 229, 0.3);
         }
+        .download-btn.storm {
+            background-color: #d29922;
+            box-shadow: 0 4px 12px rgba(210, 153, 34, 0.3);
+        }
         .download-btn:active {
             transform: scale(0.97);
         }
@@ -70,7 +74,7 @@
 <body>
 
     <div class="container">
-        <h1>Selecciona la aplicación que deseas descargar</h1>
+        <h1>Selecciona la aplicación o extensión</h1>
 
         <!-- Botón para Projectivy Launcher -->
         <a href="https://github.com/UniqueBaldwin/Apks/releases/download/Apk2/ProjectivyLauncher-4.71-c95-xda-release.apk" class="download-btn" download>
@@ -87,8 +91,23 @@
             📥 Descargar SmartTube
         </a>
 
-        <p>Toca el botón de la app que necesites para iniciar la descarga.</p>
+        <!-- Botón para Copiar Repo de Storm Ext -->
+        <button class="download-btn storm" onclick="copiarRepo('ENLACE_OFICIAL_DE_STORM_EXT', 'Storm Ext')">
+            📋 Copiar Repo Storm Ext
+        </button>
+
+        <p>Toca el botón de la app para descargar o el de Storm Ext para copiar su repositorio.</p>
     </div>
+
+    <script>
+        function copiarRepo(url, nombre) {
+            navigator.clipboard.writeText(url).then(() => {
+                alert('¡Enlace de ' + nombre + ' copiado al portapapeles! Pégalo en Cloudstream.');
+            }).catch(err => {
+                alert('Hubo un error al copiar el enlace.');
+            });
+        }
+    </script>
 
 </body>
 </html>
