@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -41,7 +41,7 @@
             cursor: pointer;
             text-decoration: none;
             box-shadow: 0 4px 12px rgba(35, 134, 54, 0.3);
-            transition: background 0.2s, transform 0.1s ease;
+            transition: transform 0.1s ease;
             margin-bottom: 15px;
             box-sizing: border-box;
             text-align: center;
@@ -54,12 +54,18 @@
             background-color: #8957e5;
             box-shadow: 0 4px 12px rgba(137, 87, 229, 0.3);
         }
+
+        /* ESTO ES LO QUE HACE MAGIA CON EL CONTROL REMOTO */
+        .download-btn:focus, .repo-input:focus {
+            outline: 4px solid #f0883e !important;
+            outline-offset: 3px;
+            transform: scale(1.02);
+        }
+
         .download-btn:active {
             transform: scale(0.97);
         }
-        .download-btn:hover {
-            opacity: 0.9;
-        }
+
         .repo-box {
             background-color: #161b22;
             border: 2px solid #d29922;
@@ -80,7 +86,6 @@
             width: 100%;
             background-color: #0d1117;
             color: #c9d1d9;
-            border: 1px: solid #30363d;
             border: 1px solid #30363d;
             padding: 10px;
             border-radius: 6px;
@@ -88,9 +93,6 @@
             box-sizing: border-box;
             text-align: center;
             outline: none;
-        }
-        .repo-input:focus {
-            border-color: #d29922;
         }
         p {
             color: #8b949e;
@@ -105,27 +107,27 @@
         <h1>Selecciona la aplicación o extensión</h1>
 
         <!-- Botón para Projectivy Launcher -->
-        <a href="https://github.com/UniqueBaldwin/Apks/releases/download/Apk2/ProjectivyLauncher-4.71-c95-xda-release.apk" class="download-btn" download>
+        <a href="https://github.com/UniqueBaldwin/Apks/releases/download/Apk2/ProjectivyLauncher-4.71-c95-xda-release.apk" class="download-btn" download tabindex="0">
             📥 Descargar Projectivy Launcher
         </a>
 
         <!-- Botón para Stream Cloud -->
-        <a href="https://github.com/UniqueBaldwin/Apks/releases/download/Apk/Cloudstream-v4.8.0.1.apk" class="download-btn secondary" download>
+        <a href="https://github.com/UniqueBaldwin/Apks/releases/download/Apk/Cloudstream-v4.8.0.1.apk" class="download-btn secondary" download tabindex="0">
             📥 Descargar Stream Cloud
         </a>
 
         <!-- Botón para SmartTube -->
-        <a href="https://github.com/yuliskov/SmartTube/releases/download/31.94s/SmartTube_stable_31.94_universal.apk" class="download-btn smarttube" download>
+        <a href="https://github.com/yuliskov/SmartTube/releases/download/31.94s/SmartTube_stable_31.94_universal.apk" class="download-btn smarttube" download tabindex="0">
             📥 Descargar SmartTube
         </a>
 
-        <!-- Caja con el Repo de Storm Ext visible en la TV -->
+        <!-- Caja de texto para el Repo de Storm Ext en la TV -->
         <div class="repo-box">
             <div class="repo-title">⚡ Repositorio Storm Ext (Cloudstream)</div>
-            <input type="text" class="repo-input" value="https://raw.githubusercontent.com/storm-ext/storm-ext/builds/repo.json" readonly onclick="this.select();">
+            <input type="text" class="repo-input" value="https://raw.githubusercontent.com/storm-ext/storm-ext/builds/repo.json" readonly tabindex="0" onclick="this.select();">
         </div>
 
-        <p>Usa los botones para descargar las apps o copia el enlace del repo para las extensiones.</p>
+        <p>Usa la cruceta del control para navegar y presiona el centro para seleccionar.</p>
     </div>
 
 </body>
