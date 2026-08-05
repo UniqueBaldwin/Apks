@@ -6,7 +6,7 @@
     <title>Descargar Aplicaciones</title>
     <style>
         body {
-            background-color: #0d1117;
+            background-color: #050505;
             color: #ffffff;
             font-family: system-ui, -apple-system, sans-serif;
             display: flex;
@@ -26,57 +26,57 @@
         h1 {
             font-size: 22px;
             margin-bottom: 25px;
-            color: #e6edf3;
+            color: #ffffff;
         }
+        /* ESTILO NEGRO CON ROJO PARA TODOS LOS BOTONES */
         .download-btn {
             display: block;
             width: 100%;
-            background-color: #238636;
-            color: white;
-            border: none;
+            background-color: #0b0b0b;
+            color: #ffffff;
+            border: 2px solid #ff3333;
             padding: 16px 20px;
             font-size: 16px;
             font-weight: bold;
             border-radius: 10px;
             cursor: pointer;
             text-decoration: none;
-            box-shadow: 0 4px 12px rgba(35, 134, 54, 0.3);
-            transition: transform 0.1s ease;
+            box-shadow: 0 4px 12px rgba(255, 51, 51, 0.2);
+            transition: transform 0.1s ease, background-color 0.2s;
             margin-bottom: 15px;
             box-sizing: border-box;
             text-align: center;
         }
-        .download-btn.secondary {
-            background-color: #1f6feb;
-            box-shadow: 0 4px 12px rgba(31, 111, 235, 0.3);
-        }
-        .download-btn.smarttube {
-            background-color: #8957e5;
-            box-shadow: 0 4px 12px rgba(137, 87, 229, 0.3);
+        .download-btn:hover {
+            background-color: #1a0505;
         }
 
-        /* ESTO ES LO QUE HACE MAGIA CON EL CONTROL REMOTO */
+        /* CONTROL REMOTO Y FOCO EN ROJO */
         .download-btn:focus, .repo-input:focus {
-            outline: 4px solid #f0883e !important;
+            outline: 4px solid #ff0000 !important;
             outline-offset: 3px;
             transform: scale(1.02);
+            background-color: #1a0505;
         }
 
         .download-btn:active {
             transform: scale(0.97);
         }
 
+        /* CAJA NEGRA CON ROJO PARA EL REPO */
         .repo-box {
-            background-color: #161b22;
-            border: 2px solid #d29922;
+            background-color: #0b0b0b;
+            border: 2px solid #ff3333;
             border-radius: 10px;
             padding: 15px;
             margin-top: 15px;
-            box-shadow: 0 4px 12px rgba(210, 153, 34, 0.2);
+            box-shadow: 0 4px 12px rgba(255, 51, 51, 0.2);
             text-align: left;
+            width: 100%;
+            box-sizing: border-box;
         }
         .repo-title {
-            color: #d29922;
+            color: #ff4444;
             font-size: 15px;
             font-weight: bold;
             margin-bottom: 8px;
@@ -84,9 +84,9 @@
         }
         .repo-input {
             width: 100%;
-            background-color: #0d1117;
-            color: #c9d1d9;
-            border: 1px solid #30363d;
+            background-color: #050505;
+            color: #ffcccc;
+            border: 1px solid #ff3333;
             padding: 10px;
             border-radius: 6px;
             font-size: 13px;
@@ -112,13 +112,18 @@
         </a>
 
         <!-- Botón para Stream Cloud -->
-        <a href="https://github.com/UniqueBaldwin/Apks/releases/download/Apk/Cloudstream-v4.8.0.1.apk" class="download-btn secondary" download tabindex="0">
+        <a href="https://github.com/UniqueBaldwin/Apks/releases/download/Apk/Cloudstream-v4.8.0.1.apk" class="download-btn" download tabindex="0">
             📥 Descargar Stream Cloud
         </a>
 
         <!-- Botón para SmartTube -->
-        <a href="https://github.com/yuliskov/SmartTube/releases/download/31.94s/SmartTube_stable_31.94_universal.apk" class="download-btn smarttube" download tabindex="0">
+        <a href="https://github.com/yuliskov/SmartTube/releases/download/31.94s/SmartTube_stable_31.94_universal.apk" class="download-btn" download tabindex="0">
             📥 Descargar SmartTube
+        </a>
+
+        <!-- Botón para Browsehere -->
+        <a href="https://github.com/UniqueBaldwin/Apks/releases/download/Apk3/browsehere-net-app-release.apk" class="download-btn" download tabindex="0">
+            📥 Descargar Browsehere
         </a>
 
         <!-- Caja de texto para el Repo de Storm Ext en la TV -->
@@ -132,4 +137,3 @@
 
 </body>
 </html>
-
